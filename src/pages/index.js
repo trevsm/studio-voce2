@@ -1,184 +1,172 @@
-import * as React from "react"
+import React from "react";
+import { Page, Section, DefaultHeader } from "../components/default";
+import { Col, Row, Button } from "react-bootstrap";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
+import { SignUpForm } from "../components/forms";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+const centerStyle = {
+  transform: "translateY(calc(50vh - 50%))",
+};
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+    <Page>
+      <Helmet>
+        <style type="text/css">
+          {`
+          span.tab:before {
+            content: "____";
+            color: transparent;
+            pointer-events: none;
+          }
+          `}
+        </style>
+      </Helmet>
+      <Section className="p-3" fullHeight>
+        <Row
+          style={{
+            ...centerStyle,
+          }}
+        >
+          <Col
+            style={{
+              minWidth: "300px",
+            }}
           >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+            <StaticImage
+              src="../images/birds.svg"
+              quality="100"
+              placeholder="NONE"
+              alt="Birds"
+            />
+          </Col>
+          <Col
+            className="d-flex"
+            style={{
+              minWidth: "300px",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <h1
+                className="py-1 px-2 mb-4 text-light"
+                style={{
+                  background: "salmon",
+                  width: "fit-content",
+                  fontSize: "23px",
+                }}
               >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
+                Studio Voce
+              </h1>
+              <h1 className="mb-4" style={{ fontSize: "32px" }}>
+                Voice Lessons & Coaching
+              </h1>
+              <p
+                className="mb-5"
+                style={{ lineHeight: "27px", fontSize: "17px" }}
+              >
+                <span
+                  style={{
+                    color: "#435a69",
+                    paddingBottom: "2px",
+                  }}
+                >
+                  Learn to improve your singing skills through weekly
+                  personalized lessons, professional feedback, and performance
+                  opportunities.{" "}
+                  <span style={{ color: "salmon" }}>
+                    Discover your unique voice.
+                  </span>
                 </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
+              </p>
+              <Link to="/#sign-up" className="mr-3">
+                <Button
+                  variant="none"
+                  style={{
+                    border: "2px solid #435a69",
+                    color: "#435a69",
+                    padding: "6px 10px",
+                  }}
+                >
+                  Sign up today!
+                </Button>
+              </Link>
+              <Link to="/#about">
+                <Button
+                  variant="none"
+                  style={{
+                    color: "#435a69",
+                    padding: "6px 10px",
+                  }}
+                >
+                  <span
+                    style={{ borderBottom: "1px dashed", paddingBottom: "2px" }}
+                  >
+                    Learn more
+                  </span>
+                </Button>
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      </Section>
+      <Section fullHeight id="about">
+        <div style={{ ...centerStyle }}>
+          <Row className="mb-5">
+            <Col>
+              <DefaultHeader
+                title="About"
+                subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col style={{ minWidth: "300px" }}>
+              <p style={{ lineHeight: "25px", fontSize: "17px" }}>
+                <span className="tab">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                  pariatur eum recusandae tempora ab, magni vitae. Nemo ullam,
+                  animi nam quis rem placeat amet odit numquam sint corrupti
+                  adipisci ab. Nemo ullam, animi nam quis rem placeat
+                </span>
+                <br />
+                <br />
+                <span>
+                  amet odit numquam sint corrupti adipisci, sit amet consectetur
+                  adipisicing elit. Id pariatur eum recusandae tempora ab, ab.
+                </span>
+              </p>
+            </Col>
+            <Col style={{ minWidth: "300px" }}>
+              <div
+                className="bg-dark"
+                style={{ width: "100%", height: "300px" }}
+              ></div>
+            </Col>
+          </Row>
+        </div>
+      </Section>
+      <Section fullHeight id="sign-up">
+        <div style={{ ...centerStyle }}>
+          <Row className="mb-5">
+            <Col>
+              <DefaultHeader
+                title="Registration"
+                subtitle="Interested in finding out if we'd be a good fit? Fill out the form below to recieve information about how to start lessons!"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col style={{ width: "100%", maxWidth: "600px", margin: "0 auto" }}>
+              <SignUpForm />
+            </Col>
+          </Row>
+        </div>
+      </Section>
+    </Page>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
