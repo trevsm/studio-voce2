@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap"
 import { Page } from "../components/default"
 import { Section } from "../components/default"
 
-export default function Contact() {
+export default function FAQ() {
     return (
         <Page>
             <Section>

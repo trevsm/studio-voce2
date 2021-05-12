@@ -1,1 +1,10 @@
-{}
+{
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false,
+    "quoteProps": "consistent",
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "endOfLine": "crlf"
+}

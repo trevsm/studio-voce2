@@ -1,0 +1,8 @@
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 28px !important;
+    }
+    #callout {
+        display: none;
+    }
+}
