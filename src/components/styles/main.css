@@ -1,8 +1,24 @@
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
     h1 {
         font-size: 28px !important;
     }
     #callout {
         display: none;
+    }
+    .reverse {
+        flex-direction: column-reverse;
+    }
+    .m-center {
+        margin: 0 auto !important;
+        padding-bottom: 30px;
+    }
+    .pl-4,
+    .px-4 {
+        padding-left: 1.1rem !important;
+    }
+
+    .pr-4,
+    .px-4 {
+        padding-right: 1.1rem !important;
     }
 }

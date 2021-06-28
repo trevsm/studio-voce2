@@ -1,9 +1,10 @@
 module.exports = {
     siteMetadata: {
         title: "Studio Voce",
+        siteUrl: `https://voce.studio`,
+        description: `Studio Voce`,
     },
     plugins: [
-        "gatsby-plugin-netlify-cms",
         "gatsby-plugin-sass",
         "gatsby-plugin-image",
         "gatsby-plugin-react-helmet",
@@ -11,6 +12,13 @@ module.exports = {
         "gatsby-transformer-remark",
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
+        {
+            resolve: `gatsby-plugin-netlify-cms`,
+            options: {
+                manualInit: true,
+                modulePath: `${__dirname}/src/cms/index.js`,
+            },
+        },
         {
             resolve: "gatsby-source-filesystem",
             options: {

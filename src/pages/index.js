@@ -27,6 +27,7 @@ const IndexPage = () => {
                     <Col
                         style={{
                             minWidth: "300px",
+                            textAlign: "center",
                         }}
                     >
                         <StaticImage
@@ -34,6 +35,7 @@ const IndexPage = () => {
                             quality="100"
                             placeholder="NONE"
                             alt="Birds"
+                            style={{ maxWidth: "350px" }}
                         />
                     </Col>
                     <Col
@@ -121,7 +123,7 @@ const IndexPage = () => {
                         />
                     </Col>
                 </Row>
-                <Row>
+                <Row className="reverse">
                     <Col style={{ minWidth: "300px" }}>
                         <p
                             style={{
@@ -130,7 +132,7 @@ const IndexPage = () => {
                                 maxWidth: "450px",
                                 marginLeft: "auto",
                             }}
-                            className="px-4"
+                            className="px-4 m-center"
                         >
                             <span className="tab">
                                 Emily Smith is currently a senior at Weber State
@@ -154,7 +156,10 @@ const IndexPage = () => {
                         </p>
                     </Col>
                     <Col style={{ minWidth: "300px" }}>
-                        <div style={{ maxWidth: "400px", marginRight: "auto" }}>
+                        <div
+                            style={{ maxWidth: "400px", marginRight: "auto" }}
+                            className="m-center"
+                        >
                             <Frame />
                         </div>
                     </Col>

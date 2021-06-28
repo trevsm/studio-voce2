@@ -6,6 +6,14 @@ function Icon() {
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
             viewBox="0 0 1599.76 411.25"
+            style={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                minWidth: "1000px",
+                bottom: 0,
+                zIndex: -100,
+            }}
         >
             <path
                 fill={"var(--dblue)"}

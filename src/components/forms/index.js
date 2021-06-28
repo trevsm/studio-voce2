@@ -118,7 +118,7 @@ export function SignUpForm() {
                     title: "Custom Message",
                     as: "textarea",
                     placeholder:
-                        "Hey Emily!\nI'm interested in signing up for private lessons.",
+                        "Hey Emily! \nI'm interested in signing up for private lessons.",
                     rows: 3,
                     required: false,
                 },

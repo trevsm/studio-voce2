@@ -4,15 +4,6 @@ import { Header } from "./Header"
 import { Footer } from "./Footer"
 import "../styles/main.css"
 
-const footerStyling = {
-    position: "absolute",
-    bottom: "0",
-    left: "50%",
-    width: "100%",
-    minWidth: "1100px",
-    transform: "translateX(-50%)",
-}
-
 export function Page({ children, className = "" }) {
     return (
         <div
@@ -40,9 +31,7 @@ export function Page({ children, className = "" }) {
             </Helmet>
             <Header />
             <div>{children}</div>
-            <div style={footerStyling}>
-                <Footer />
-            </div>
+            <Footer />
         </div>
     )
 }

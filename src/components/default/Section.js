@@ -13,9 +13,9 @@ export function Section({ children, id, spacers = true }) {
             <Helmet>
                 <style type="text/css">
                     {`
-          @media only screen and (max-width: 400px) {
+          @media only screen and (max-width: 600px) {
             :root{
-              --space: 0;
+              --space: 20px;
             }
           }
           `}

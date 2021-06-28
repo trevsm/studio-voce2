@@ -6,92 +6,54 @@ import Birds from "../icons/birds"
 import { Helmet } from "react-helmet"
 
 export function Footer() {
-    const date = new Date()
+    const year = new Date().getFullYear()
     return (
-        <Section spacers={false}>
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0 }}>
             <Helmet>
                 <style type="text/css">
                     {`
-                    
+                    ul{
+                        padding: 0 10px !important;
+                    }
                     ul li{
-                        width:fit-content;
+                        list-style-type: none;
                     }
-                    #birds{
-                        right: 50px;
-                    }
-                    @media only screen and (max-width: 800px) {
-                        #birds{
-                            right: 50%;
-                            transform: translateX(50%);
-                        }
-                      }
-
                     `}
                 </style>
             </Helmet>
-            <div style={{ position: "relative" }}>
-                <Blob />
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "50%",
-                        right: "30px",
-                        left: "30px",
-                        transform: "translateY(-50%)",
-                    }}
-                >
-                    <Row
-                        className="text-light text-center mb-4"
-                        style={{
-                            position: "relative",
-                            width: "100vw",
-                            maxWidth: "70%",
-                            margin: "0 auto",
-                        }}
-                    >
-                        <Col
-                            style={{ maxWidth: "fit-content" }}
-                            className="border-right pr-5"
-                        >
-                            <ul>
-                                <li>Sign&nbsp;up</li>
-                                <li>About</li>
-                                <li>Contact</li>
-                            </ul>
-                        </Col>
-                        <Col style={{ maxWidth: "fit-content" }}>
-                            <ul>
-                                <li>Calendar</li>
-                                <li>Pricing</li>
-                                <li>Studio&nbsp;Policy</li>
-                            </ul>
-                        </Col>
-                        <Col>asdf</Col>
-                    </Row>
+            <Section spacers={false}>
+                <div className="footer" style={{ position: "relative" }}>
+                    <Blob />
+                    <div style={{ width: "fit-content", margin: "0 auto" }}>
+                        <Row className="text-light mb-4">
+                            <Col className="border-right pr-3">
+                                <ul>
+                                    <li>Sign&nbsp;up</li>
+                                    <li>About</li>
+                                    <li>Contact</li>
+                                </ul>
+                            </Col>
+                            <Col className="border-right pr-3">
+                                <ul>
+                                    <li>Calendar</li>
+                                    <li>Pricing</li>
+                                    <li>Studio&nbsp;Policy</li>
+                                </ul>
+                            </Col>
+                            <Col className="pr-3">
+                                <ul>
+                                    <li>asdf</li>
+                                    <li>asdf</li>
+                                    <li>asdf</li>
+                                </ul>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div className="text-light" style={{ textAlign: "center" }}>
+                        <Birds /> © {year} StudioVoce
+                    </div>
                 </div>
-                <div
-                    id="birds"
-                    style={{
-                        position: "absolute",
-                        bottom: "30px",
-                        width: "100%",
-                        maxWidth: "200px",
-                    }}
-                >
-                    <Birds />
-                </div>
-                <div
-                    className="text-light"
-                    style={{
-                        position: "absolute",
-                        bottom: "5px",
-                        textAlign: "center",
-                        width: "100%",
-                    }}
-                >
-                    © {date.getFullYear()} StudioVoce
-                </div>
-            </div>
-        </Section>
+            </Section>
+        </div>
     )
 }
