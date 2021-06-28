@@ -21,6 +21,10 @@
     .px-4 {
         padding-right: 1.1rem !important;
     }
+
+    .calendar-parent {
+        transform: translateY(10%) !important;
+    }
 }
 
 .form-control:focus {
@@ -29,4 +33,34 @@
     border-color: pink;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(255 0 0 / 14%);
+}
+
+.react-calendar * {
+    color: inherit !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: inherit !important;
+}
+.react-calendar__tile--now {
+    background: #fa807252 !important;
+}
+.react-calendar__tile--active {
+    background: #fa8072 !important;
+    color: white !important;
+}
+
+.calendar-parent {
+    transform: scale(1.3) translateY(25%);
+}
+
+.react-calendar {
+    width: 70vw !important;
+    max-width: 500px !important;
+    border: unset !important;
+}
+abbr[data-original-title],
+abbr[title] {
+    border-bottom: 1px solid black;
+    text-decoration: var(--dblue);
 }
