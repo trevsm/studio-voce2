@@ -32,25 +32,18 @@ export function Footer() {
                         }}
                     >
                         <Row className="text-light mb-4">
-                            <Col className="border-right pr-3">
+                            <Col className="border-right text-right">
                                 <ul>
                                     <li>Sign&nbsp;up</li>
                                     <li>About</li>
                                     <li>Contact</li>
                                 </ul>
                             </Col>
-                            <Col className="border-right pr-3">
+                            <Col>
                                 <ul>
                                     <li>Calendar</li>
                                     <li>Pricing</li>
                                     <li>Studio&nbsp;Policy</li>
-                                </ul>
-                            </Col>
-                            <Col className="pr-3">
-                                <ul>
-                                    <li>asdf</li>
-                                    <li>asdf</li>
-                                    <li>asdf</li>
                                 </ul>
                             </Col>
                         </Row>
