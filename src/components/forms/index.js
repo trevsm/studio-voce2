@@ -17,7 +17,12 @@ export function Input({
 }) {
     return (
         <Form.Group controlId={"control_id_" + name} hidden={hidden}>
-            <Form.Label>{title + ":"}</Form.Label>
+            <Form.Label>
+                {title + ": "}
+                {required ? null : (
+                    <span style={{ opacity: ".5" }}>(optional)</span>
+                )}
+            </Form.Label>
             <Form.Control
                 placeholder={placeholder}
                 type={type}

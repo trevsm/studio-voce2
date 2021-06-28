@@ -22,3 +22,11 @@
         padding-right: 1.1rem !important;
     }
 }
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: pink;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(255 0 0 / 14%);
+}

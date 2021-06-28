@@ -24,7 +24,13 @@ export function Footer() {
             <Section spacers={false}>
                 <div className="footer" style={{ position: "relative" }}>
                     <Blob />
-                    <div style={{ width: "fit-content", margin: "0 auto" }}>
+                    <div
+                        style={{
+                            margin: "0 auto",
+                            width: "60%",
+                            minWidth: "300px",
+                        }}
+                    >
                         <Row className="text-light mb-4">
                             <Col className="border-right pr-3">
                                 <ul>
