@@ -112,7 +112,6 @@ const IndexPage = () => {
                     </Col>
                 </Row>
             </Section>
-
             <LineBreak />
             <Section id="about">
                 <Row className="mb-5">
@@ -154,10 +153,35 @@ const IndexPage = () => {
                     </Col>
                     <Col style={{ minWidth: "300px" }}>
                         <div
-                            style={{ maxWidth: "400px", marginRight: "auto" }}
+                            style={{
+                                maxWidth: "400px",
+                                marginRight: "auto",
+                                position: "relative",
+                            }}
                             className="m-center"
                         >
-                            <Frame />
+                            <div
+                                style={{
+                                    position: "absolute",
+                                    top: "0",
+                                    left: "0",
+                                    right: "0",
+                                }}
+                            >
+                                <Frame />
+                            </div>
+                            <StaticImage
+                                src="../../static/media/emily.jpg"
+                                quality="90"
+                                placeholder="NONE"
+                                alt="Birds"
+                                style={{
+                                    border: "5px solid white",
+                                    background: "white",
+                                    borderRadius: "25px",
+                                    transform: "scale(0.77) translateY(-30px)",
+                                }}
+                            />
                         </div>
                     </Col>
                 </Row>
