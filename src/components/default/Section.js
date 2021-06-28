@@ -8,7 +8,6 @@ export function Section({ children, id, spacers = true }) {
                 margin: "0 auto",
                 padding: `${spacers ? "var(--space)" : ""} 0`,
             }}
-            id={id}
         >
             <Helmet>
                 <style type="text/css">
@@ -21,7 +20,9 @@ export function Section({ children, id, spacers = true }) {
           `}
                 </style>
             </Helmet>
-            {children}
+            <div id={id} style={{ paddingTop: "50px", marginTop: "-50px" }}>
+                {children}
+            </div>
         </div>
     )
 }

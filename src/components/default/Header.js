@@ -4,6 +4,10 @@ import { Navbar, NavDropdown, Nav } from "react-bootstrap"
 import { Link } from "gatsby"
 
 export function Header() {
+    function closeBar() {
+        const bar = document.querySelector(".navbar-toggler")
+        if (!bar.classList.contains("collapsed")) bar.click()
+    }
     return (
         <>
             <Helmet>
@@ -39,36 +43,60 @@ export function Header() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Link to="/#sign-up" className="nav-link">
+                        <Link
+                            to="/#sign-up"
+                            className="nav-link"
+                            onClick={closeBar}
+                        >
                             Sign Up
                         </Link>
-                        <Link to="/#about" className="nav-link">
+                        <Link
+                            to="/#about"
+                            className="nav-link"
+                            onClick={closeBar}
+                        >
                             About
                         </Link>
-                        <Link to="/contact" className="nav-link">
+                        <Link
+                            to="/contact"
+                            className="nav-link"
+                            onClick={closeBar}
+                        >
                             Contact
                         </Link>
                         <NavDropdown
                             title="More Info"
                             id="collasible-nav-dropdown"
                         >
-                            <Link to="/calendar" className="dropdown-item">
+                            <Link
+                                to="/calendar"
+                                className="dropdown-item"
+                                onClick={closeBar}
+                            >
                                 Calendar
                             </Link>
-                            <Link to="/pricing" className="dropdown-item">
+                            <Link
+                                to="/pricing"
+                                className="dropdown-item"
+                                onClick={closeBar}
+                            >
                                 Pricing
                             </Link>
                             <NavDropdown.Divider />
-                            <Link to="/studio-policy" className="dropdown-item">
+                            <Link
+                                to="/studio-policy"
+                                className="dropdown-item"
+                                onClick={closeBar}
+                            >
                                 Studio Policy
                             </Link>
                         </NavDropdown>
                     </Nav>
-                    <Nav>
+                    {/* <Nav>
                         <Link to="/sign-in" className="nav-link">
                             Student Sign-in
                         </Link>
-                    </Nav>
+                    </Nav> */}
                 </Navbar.Collapse>
             </Navbar>
         </>
