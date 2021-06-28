@@ -13,7 +13,7 @@ export function Page({ children, className = "" }) {
                 width: "100%",
                 minHeight: "100vh",
                 paddingTop: "50px",
-                paddingBottom: "calc(5vw + 300px)",
+                paddingBottom: "calc(5vw + 250px)",
             }}
         >
             <Helmet>

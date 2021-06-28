@@ -117,10 +117,7 @@ const IndexPage = () => {
             <Section id="about">
                 <Row className="mb-5">
                     <Col>
-                        <DefaultHeader
-                            title="About the instructor"
-                            subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-                        />
+                        <DefaultHeader title="About the instructor" />
                     </Col>
                 </Row>
                 <Row className="reverse">

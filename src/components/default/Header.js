@@ -7,6 +7,7 @@ export function Header() {
     function closeBar() {
         const bar = document.querySelector(".navbar-toggler")
         if (!bar.classList.contains("collapsed")) bar.click()
+        window.scrollTo(0, 0)
     }
     return (
         <>
@@ -75,21 +76,21 @@ export function Header() {
                             >
                                 Calendar
                             </Link>
-                            <Link
+                            {/* <Link
                                 to="/pricing"
                                 className="dropdown-item"
                                 onClick={closeBar}
                             >
                                 Pricing
-                            </Link>
+                            </Link> */}
                             <NavDropdown.Divider />
-                            <Link
-                                to="/studio-policy"
+                            <a
+                                href="/media/studio_policy.pdf"
                                 className="dropdown-item"
                                 onClick={closeBar}
                             >
                                 Studio Policy
-                            </Link>
+                            </a>
                         </NavDropdown>
                     </Nav>
                     {/* <Nav>

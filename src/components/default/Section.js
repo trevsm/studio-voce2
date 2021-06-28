@@ -1,12 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-export function Section({ children, id, spacers = true }) {
+export function Section({ children, id, spacers = true, style }) {
     return (
         <div
             style={{
                 maxWidth: "1200px",
                 margin: "0 auto",
                 padding: `${spacers ? "var(--space)" : ""} 0`,
+                ...style,
             }}
         >
             <Helmet>

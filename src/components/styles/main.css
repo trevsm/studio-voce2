@@ -59,8 +59,14 @@
     max-width: 500px !important;
     border: unset !important;
 }
+
 abbr[data-original-title],
 abbr[title] {
     border-bottom: 1px solid black;
     text-decoration: var(--dblue);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #fa8072 !important;
 }
