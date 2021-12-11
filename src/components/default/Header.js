@@ -76,21 +76,14 @@ export function Header() {
                             >
                                 Calendar
                             </Link>
-                            {/* <Link
-                                to="/pricing"
-                                className="dropdown-item"
-                                onClick={closeBar}
-                            >
-                                Pricing
-                            </Link> */}
                             <NavDropdown.Divider />
-                            <a
-                                href="/media/studio_policy.pdf"
+                            <Link
+                                to="/studio-policy"
                                 className="dropdown-item"
                                 onClick={closeBar}
                             >
                                 Studio Policy
-                            </a>
+                            </Link>
                         </NavDropdown>
                     </Nav>
                     {/* <Nav>
