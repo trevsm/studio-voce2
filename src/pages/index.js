@@ -131,23 +131,34 @@ const IndexPage = () => {
                             className="px-4 m-center"
                         >
                             <span className="tab">
-                                Emily Smith is currently a senior at Weber State
-                                Universtity studying vocal pedagogy. Her studies
-                                are focused in the art and science of teaching
-                                voice. She’s had years of experience in
-                                performing classical, opera, and musical
-                                theater. Under the guidance of Dr. Karen
-                                Bruestle (WSU) Emily has gained several teaching
-                                and performing skills including: breath
-                                management, musicianship and artistry in
-                                performing, and a musically analytical ear.
+                                Emily wants each of her students to realize the
+                                potential of their unique voice. Her goal is to
+                                eliminate destructive self-criticism and to
+                                build self-confidence through singing. She
+                                believes she can help anyone learn to love their
+                                unique voice.
                             </span>
                             <br />
                             <br />
                             <span>
-                                Emily is excited to share her knowledge and
-                                talent with prospective students who are
-                                dedicated and ready to sing smarter.
+                                Emily’s specialty is the art and science of
+                                teaching singing. She will earn her Bachelor of
+                                Music in Vocal Pedagogy from Weber State
+                                University (anticipated Fall 2022). She has had
+                                10+ years of experience in performing in musical
+                                theater productions, singing in choirs, and
+                                playing piano.
+                            </span>
+                            <br />
+                            <br />
+                            <span>
+                                Emily guides her students to find their voice
+                                using her teaching and performing skills
+                                including: breath management, musicianship and
+                                artistry in performing, and a musically
+                                analytical ear. She is excited to share her
+                                knowledge and talent with prospective students
+                                who are dedicated and ready to sing smarter.
                             </span>
                         </p>
                     </Col>

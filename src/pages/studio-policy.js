@@ -4,6 +4,7 @@ import { Row, Col } from "react-bootstrap"
 import { Helmet } from "react-helmet"
 import { Page } from "../components/default"
 import { Section } from "../components/default"
+import { isMobile } from "react-device-detect"
 
 const policyItems = [
     {
@@ -46,7 +47,7 @@ const policyItems = [
                             Tuition is due before or at the first lesson of each
                             month.
                         </i>
-                    </b>
+                    </b>{" "}
                     Late payments will incur a $10 fee. Valid forms of payment
                     include: cash, check, or Venmo. <i>(@Emily-Marsden-1)</i>{" "}
                     Checks should be made out to <i>“Emily Smith”</i>.
@@ -164,37 +165,59 @@ export default function Policy() {
                 `}
                 </style>
             </Helmet>
-            <Section style={{ padding: "70px" }}>
-                <Row style={{ marginBottom: "100px" }}>
-                    <Col>
-                        <h3
-                            style={{
-                                width: "fit-content",
-                                paddingBottom: "10px",
-                                color: "var(--dblue)",
-                            }}
-                        >
-                            Studio Policy
-                        </h3>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col sm={4} className="lMenu">
-                        <ul>
-                            {policyItems.map((item, i) => (
-                                <li
-                                    key={i}
-                                    className={(i === index).toString()}
+            <Section style={{ padding: isMobile ? "10px" : "70px" }}>
+                {isMobile ? (
+                    <div>
+                        <Row>
+                            <Col>
+                                {policyItems.map((item, i) => (
+                                    <div
+                                        key={i}
+                                        style={{ marginBottom: "70px" }}
+                                    >
+                                        <h4 style={{ margin: "30px 0 20px 0" }}>
+                                            {item.title}
+                                        </h4>
+                                        {item.content}
+                                    </div>
+                                ))}
+                            </Col>
+                        </Row>
+                    </div>
+                ) : (
+                    <div>
+                        <Row style={{ marginBottom: "100px" }}>
+                            <Col>
+                                <h3
+                                    style={{
+                                        width: "fit-content",
+                                        paddingBottom: "10px",
+                                        color: "var(--dblue)",
+                                    }}
                                 >
-                                    <button onClick={() => setIndex(i)}>
-                                        {item.title}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </Col>
-                    <Col>{policyItems[index].content}</Col>
-                </Row>
+                                    Studio Policy
+                                </h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm={4} className="lMenu">
+                                <ul>
+                                    {policyItems.map((item, i) => (
+                                        <li
+                                            key={i}
+                                            className={(i === index).toString()}
+                                        >
+                                            <button onClick={() => setIndex(i)}>
+                                                {item.title}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </Col>
+                            <Col>{policyItems[index].content}</Col>
+                        </Row>
+                    </div>
+                )}
             </Section>
         </Page>
     )
