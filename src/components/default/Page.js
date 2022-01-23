@@ -19,19 +19,30 @@ export function Page({ children, className = "" }) {
             <Helmet>
                 <style type="text/css">
                     {`
-            html, body{
-                overflow-x:hidden;
-            }
-            :root{
-              --dblue: rgb(67 90 105);
-              --space: 100px;
-            }
-          `}
+                html, body{
+                    overflow-x:hidden;
+                }
+                :root{
+                  --dblue: rgb(67 90 105);
+                  --space: 100px;
+                }
+               `}
                 </style>
+                <title>Studio Voce</title>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHR2RRR0YX"></script>
+                <script>
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', 'G-DHR2RRR0YX');
+                `}
+                </script>
             </Helmet>
             <Header />
             <div>{children}</div>
-            <Footer />
+            <Footer /> 
         </div>
     )
 }
