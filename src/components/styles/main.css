@@ -79,3 +79,7 @@ abbr[title] {
 .dropdown-item:active {
     background-color: #fa8072 !important;
 }
+
+.footer a {
+    color: white !important;
+}

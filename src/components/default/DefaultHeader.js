@@ -9,9 +9,10 @@ export function DefaultHeader({ title, subtitle }) {
             <h1 style={{ fontSize: "35px" }}>{title}</h1>
             <h2
                 style={{
-                    fontSize: "20px",
+                    fontSize: "18px",
                     fontWeight: "400",
                     paddingBottom: "20px",
+                    lineHeight: "40px",
                 }}
             >
                 {subtitle}
@@ -19,3 +20,4 @@ export function DefaultHeader({ title, subtitle }) {
         </div>
     )
 }
+

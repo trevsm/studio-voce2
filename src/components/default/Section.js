@@ -4,7 +4,7 @@ export function Section({ children, id, spacers = true, style }) {
     return (
         <div
             style={{
-                maxWidth: "1200px",
+                maxWidth: "1000px",
                 margin: "0 auto",
                 padding: `${spacers ? "var(--space)" : ""} 0`,
                 ...style,
@@ -27,3 +27,4 @@ export function Section({ children, id, spacers = true, style }) {
         </div>
     )
 }
+

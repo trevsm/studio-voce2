@@ -30,68 +30,75 @@ export function Header() {
                 variant="light"
                 style={{
                     background: "#ffffffe6",
-                    maxWidth: "1200px",
-                    margin: "0 auto",
+                    padding: "20px 40px",
+                    boxShadow: "0 0 10px 0 rgba(0,0,0,.1)",
                 }}
             >
-                <Link
-                    to="/"
-                    className="navbar-brand"
-                    style={{ color: "salmon" }}
+                <div
+                    style={{
+                        display: "flex",
+                        width: "100%",
+                        maxWidth: "1000px",
+                        margin: "0 auto",
+                    }}
                 >
-                    Studio Voce
-                </Link>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Link
-                            to="/#sign-up"
-                            className="nav-link"
-                            onClick={closeBar}
-                        >
-                            Sign Up
-                        </Link>
-                        <Link
-                            to="/#about"
-                            className="nav-link"
-                            onClick={closeBar}
-                        >
-                            About
-                        </Link>
-                        <Link
-                            to="/contact"
-                            className="nav-link"
-                            onClick={closeBar}
-                        >
-                            Contact
-                        </Link>
-                        <NavDropdown
-                            title="More Info"
-                            id="collasible-nav-dropdown"
-                        >
+                    <Link
+                        to="/"
+                        className="navbar-brand"
+                        style={{
+                            color: "salmon",
+                            fontSize: "1.5rem",
+                        }}
+                    >
+                        Studio Voce
+                    </Link>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="ml-auto">
                             <Link
-                                to="/calendar"
-                                className="dropdown-item"
+                                to="/#sign-up"
+                                className="nav-link"
                                 onClick={closeBar}
                             >
-                                Calendar
+                                Sign Up
                             </Link>
-                            <NavDropdown.Divider />
                             <Link
-                                to="/studio-policy"
-                                className="dropdown-item"
+                                to="/#about"
+                                className="nav-link"
                                 onClick={closeBar}
                             >
-                                Studio Policy
+                                About
                             </Link>
-                        </NavDropdown>
-                    </Nav>
-                    {/* <Nav>
-                        <Link to="/sign-in" className="nav-link">
-                            Student Sign-in
-                        </Link>
-                    </Nav> */}
-                </Navbar.Collapse>
+                            <Link
+                                to="/contact"
+                                className="nav-link"
+                                onClick={closeBar}
+                            >
+                                Contact
+                            </Link>
+                            <NavDropdown
+                                title="More Info"
+                                id="collasible-nav-dropdown"
+                            >
+                                <Link
+                                    to="/calendar"
+                                    className="dropdown-item"
+                                    onClick={closeBar}
+                                >
+                                    Calendar
+                                </Link>
+                                <NavDropdown.Divider />
+                                <Link
+                                    to="/studio-policy"
+                                    className="dropdown-item"
+                                    onClick={closeBar}
+                                >
+                                    Studio Policy
+                                </Link>
+                            </NavDropdown>
+                        </Nav>
+                    </Navbar.Collapse>
+                </div>
             </Navbar>
         </>
     )

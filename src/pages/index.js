@@ -6,7 +6,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
 import { SignUpForm } from "../components/forms"
 import LineBreak from "../components/icons/lineBreak"
-import Frame from "../components/icons/frame"
 
 const IndexPage = () => {
     return (
@@ -130,35 +129,28 @@ const IndexPage = () => {
                             }}
                             className="px-4 m-center"
                         >
-                            <span className="tab">
-                                Emily wants each of her students to realize the
-                                potential of their unique voice. Her goal is to
-                                eliminate destructive self-criticism and to
-                                build self-confidence through singing. She
-                                believes she can help anyone learn to love their
+                            <span>
+                                As a vocal coach with over 10 years of
+                                experience in musical theater, choir singing,
+                                and piano playing, Emily is passionate about
+                                helping her students discover and embrace the
+                                unique potential of their voices. She is
+                                dedicated to eliminating self-criticism and
+                                building self-confidence through singing, and
+                                believes that anyone can learn to love their own
                                 unique voice.
                             </span>
                             <br />
                             <br />
                             <span>
-                                Emily’s specialty is the art and science of
-                                teaching singing. She will earn her Bachelor of
-                                Music in Vocal Pedagogy from Weber State
-                                University (anticipated Fall 2022). She has had
-                                10+ years of experience in performing in musical
-                                theater productions, singing in choirs, and
-                                playing piano.
-                            </span>
-                            <br />
-                            <br />
-                            <span>
-                                Emily guides her students to find their voice
-                                using her teaching and performing skills
-                                including: breath management, musicianship and
-                                artistry in performing, and a musically
-                                analytical ear. She is excited to share her
-                                knowledge and talent with prospective students
-                                who are dedicated and ready to sing smarter.
+                                With a bachelor's degree in vocal pedagogy,
+                                Emily is well-equipped to guide her students in
+                                finding their voices through techniques such as
+                                breath management, musical analysis, and
+                                artistic performance. If you are ready to sing
+                                smarter and are dedicated to improving your
+                                skills, Emily is excited to share her knowledge
+                                and talent with you.
                             </span>
                         </p>
                     </Col>
@@ -171,26 +163,16 @@ const IndexPage = () => {
                             }}
                             className="m-center"
                         >
-                            <div
-                                style={{
-                                    position: "absolute",
-                                    top: "0",
-                                    left: "0",
-                                    right: "0",
-                                }}
-                            >
-                                <Frame />
-                            </div>
                             <StaticImage
                                 src="../../static/media/emily.jpg"
                                 quality="90"
                                 placeholder="NONE"
-                                alt="Birds"
+                                alt="Emily Marsden"
                                 style={{
                                     border: "5px solid white",
                                     background: "white",
                                     borderRadius: "25px",
-                                    transform: "scale(0.77) translateY(-30px)",
+                                    transform: "scale(0.90)",
                                 }}
                             />
                         </div>
@@ -206,11 +188,11 @@ const IndexPage = () => {
                         />
                     </Col>
                 </Row>
-                <Row>
+                <Row className="mb-5">
                     <Col
                         style={{
                             width: "100%",
-                            maxWidth: "600px",
+                            maxWidth: "800px",
                             margin: "0 auto",
                         }}
                     >

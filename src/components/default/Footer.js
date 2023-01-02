@@ -1,9 +1,9 @@
 import React from "react"
 import { Section } from "./Section"
-import Blob from "../icons/footBlob"
 import { Col, Row } from "react-bootstrap"
 import Birds from "../icons/birds"
 import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
 
 export function Footer() {
     const year = new Date().getFullYear()
@@ -21,9 +21,15 @@ export function Footer() {
                     `}
                 </style>
             </Helmet>
-            <Section spacers={false}>
+            <Section
+                spacers={false}
+                style={{
+                    background: "rgb(67, 90, 105)",
+                    borderRadius: "30px 30px 0 0",
+                    padding: "50px",
+                }}
+            >
                 <div className="footer" style={{ position: "relative" }}>
-                    <Blob />
                     <div
                         style={{
                             margin: "0 auto",
@@ -32,18 +38,67 @@ export function Footer() {
                         }}
                     >
                         <Row className="text-light mb-4">
-                            <Col className="border-right text-right">
+                            <Col>
                                 <ul>
-                                    <li>Sign&nbsp;up</li>
-                                    <li>About</li>
-                                    <li>Contact</li>
+                                    <li>
+                                        <b
+                                            style={{
+                                                textDecoration: "underline",
+                                            }}
+                                        >
+                                            Links
+                                        </b>
+                                    </li>
+                                    <br />
+                                    <Link to="/#sign-up">
+                                        <li>Sign&nbsp;up</li>
+                                    </Link>
+                                    <Link to="/#about">
+                                        <li>About</li>
+                                    </Link>
+                                    <Link to="/calendar">
+                                        <li>Events</li>
+                                    </Link>
+                                    <Link to="/studio-policy">
+                                        <li>Studio Policy</li>
+                                    </Link>
                                 </ul>
                             </Col>
                             <Col>
                                 <ul>
-                                    <li>Calendar</li>
-                                    <li>Pricing</li>
-                                    <li>Studio&nbsp;Policy</li>
+                                    <li>
+                                        <b
+                                            style={{
+                                                textDecoration: "underline",
+                                            }}
+                                        >
+                                            Social
+                                        </b>
+                                    </li>
+                                    <br />
+                                    <a href="https://facebook.com">
+                                        <li>Facebook</li>
+                                    </a>
+                                    <a href="https://instagram.com">
+                                        <li>Instagram</li>
+                                    </a>
+                                </ul>
+                            </Col>
+                            <Col>
+                                <ul>
+                                    <li>
+                                        <b
+                                            style={{
+                                                textDecoration: "underline",
+                                            }}
+                                        >
+                                            Contact
+                                        </b>
+                                    </li>
+                                    <br />
+                                    <li>Email: hello@voce.studio</li>
+                                    <br />
+                                    <li>West Bountiful, UT 84010</li>
                                 </ul>
                             </Col>
                         </Row>
@@ -56,3 +111,4 @@ export function Footer() {
         </div>
     )
 }
+
