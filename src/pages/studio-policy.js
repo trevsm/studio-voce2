@@ -12,19 +12,16 @@ const policyItems = [
         content: (
             <div className="content">
                 <li>
-                    ♪ To listen to and analyze the student&rsquo;s vocal needs
-                    and provide the proper solution.
+                    ♪ We listen to students' vocal needs and provide solutions.
                 </li>
                 <li>
-                    ♪ To encourage healthy vocal technique through exercises and
+                    ♪ We promote healthy vocal techniques through exercises and
                     repertoire.
                 </li>
+                <li>♪ We inspire appreciation for different music styles.</li>
                 <li>
-                    ♪ To inspire an appreciation for various styles of music.
-                </li>
-                <li>
-                    ♪ To establish standards of respect and appropriate behavior
-                    in the studio, performances, and other performance settings.
+                    ♪ We maintain standards of respect and proper behavior in
+                    the studio and performances.
                 </li>
             </div>
         ),
@@ -35,22 +32,22 @@ const policyItems = [
             <div className="content">
                 <p>Private lessons are one-on-one and are held weekly:</p>
                 <p style={{ textAlign: "center" }}>
-                    <i>$140 – four 45-minute lessons</i>
+                    <i>$140 for four 45-minute lessons</i>
                 </p>
                 <p>
-                    There are only 4 lessons per month. If a month has 5 weeks,
-                    we will still only have 4 lessons that month.
+                    Each month includes only 4 lessons, regardless of the number
+                    of weeks.
                 </p>
                 <p>
                     <b>
                         <i>
                             Tuition is due before or at the first lesson of each
-                            month.
+                            month.{" "}
                         </i>
-                    </b>{" "}
-                    Late payments will incur a $10 fee. Valid forms of payment
-                    include: cash, check, or Venmo. <i>(@Emily-Marsden-1)</i>{" "}
-                    Checks should be made out to <i>“Emily Smith”</i>.
+                    </b>
+                    Late payments will incur a $10 fee. Valid payments: cash,
+                    check, or Venmo <i>(@Emily-Marsden-1)</i>. Checks should be
+                    made out to <i>“Emily Smith”</i>.
                 </p>
             </div>
         ),
@@ -60,25 +57,19 @@ const policyItems = [
         content: (
             <div className="content">
                 <p>
-                    Students are expected to be on time to their lessons. No
-                    time will be given to accommodate late arrivals; the lesson
-                    will end at the scheduled time.
+                    Students must arrive on time for lessons. Late arrivals
+                    won't get extra time.
                 </p>
                 <p>
-                    In the event a student needs to cancel a lesson, they must
-                    give notice <b>at least 24 hours</b> before the scheduled
-                    lesson time. If notice is given with less than 24 hours
-                    notice, the lesson will be forfeited with no refund or
-                    make-up lesson
+                    To cancel a lesson, students must notify{" "}
+                    <b>at least 24 hours</b> in advance. Lessons cancelled with
+                    less than 24 hours notice won't be refunded or rescheduled.
                 </p>
                 <p>
-                    Students will have the opportunity to schedule a make-up
-                    lesson when a lesson is cancelled with at least 24 hours
-                    notice. The student must schedule a make-up lesson{" "}
-                    <b>within two weeks</b> of the cancelled lesson, otherwise,
-                    the lesson will be forfeited with no refund. Excessive
-                    absences due to illness or family emergencies will be
-                    handled on a case-by-case basis.
+                    Lessons cancelled with 24 hours notice can be rescheduled{" "}
+                    <b>within two weeks</b>
+                    of the cancelled lesson. Absences due to illness or
+                    emergencies will be considered separately.
                 </p>
             </div>
         ),
@@ -88,27 +79,19 @@ const policyItems = [
         content: (
             <div className="content">
                 <p>
-                    <b>
-                        Students should come fully prepared for their lessons.
-                    </b>{" "}
-                    This means that the student has practiced the assigned
-                    amount of time, and brought all necessary materials needed
-                    for the lesson. These materials include: music in organized
-                    folder, practice journal/chart, pencil (no pens!), water,
-                    and a positive mindset.
+                    <b>Students must come fully prepared.</b> This includes
+                    having practiced the assigned amount of time and bringing
+                    necessary materials: organized music folder, practice
+                    journal, pencil (no pens!), water, and a positive mindset.
                 </p>
                 <p>
-                    Daily practice is crucial for a student’s progress. The
-                    amount a student is expected to practice will vary according
-                    to each student. This will be determined in lessons, and the
-                    student will be assigned a certain amount of time to
-                    practice each day. A student’s practice will be tracked
-                    through practice charts/journals, which should be brought to
-                    every lesson.
+                    Daily practice is essential for progress. The amount of
+                    practice will be assigned during lessons. Practice will be
+                    tracked through charts/journals brought to every lesson.
                 </p>
                 <p>
-                    <b>Practice</b> includes doing vocal exercises worked on
-                    during lessons, sight-singing, and working on repertoire.
+                    <b>Practice</b> includes vocal exercises, sight-singing, and
+                    working on repertoire.
                 </p>
             </div>
         ),
@@ -120,15 +103,14 @@ const policyItems = [
                 <p>
                     There will be a <b>studio recital</b> at least twice a year
                     (spring and fall). Students will be encouraged to perform at
-                    least one song at the recital. These performances allow the
-                    student to showcase their hard work and talent for loved
-                    ones and is good practice for performing outside of the
-                    studio
+                    least one song. These performances provide a platform to
+                    showcase hard work and talent.
                 </p>
             </div>
         ),
     },
 ]
+
 export default function Policy() {
     const [index, setIndex] = useState(0)
     return (

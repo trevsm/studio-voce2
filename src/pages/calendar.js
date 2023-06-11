@@ -25,6 +25,7 @@ export default function Component() {
                             style={{
                                 margin: "0 auto",
                                 width: "fit-content",
+                                paddingBottom: "100px",
                             }}
                         >
                             <Calendar value={value} onChange={onChange} />
@@ -35,3 +36,4 @@ export default function Component() {
         </Page>
     )
 }
+

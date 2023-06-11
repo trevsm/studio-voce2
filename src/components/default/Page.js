@@ -7,13 +7,10 @@ import "../styles/main.css"
 export function Page({ children, className = "" }) {
     return (
         <div
-            className={className + " text-dark px-4"}
+            className={className + " text-dark"}
             style={{
                 position: "relative",
                 width: "100%",
-                minHeight: "100vh",
-                paddingTop: "50px",
-                paddingBottom: "calc(5vw + 250px)",
             }}
         >
             <Helmet>
@@ -41,8 +38,8 @@ export function Page({ children, className = "" }) {
                 </script>
             </Helmet>
             <Header />
-            <div>{children}</div>
-            <Footer /> 
+            <div style={{padding:"100px 20px 20px 20px"}}>{children}</div>
+            <Footer />
         </div>
     )
 }

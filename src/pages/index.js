@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
 import { SignUpForm } from "../components/forms"
 import LineBreak from "../components/icons/lineBreak"
+import { Box, Typography } from "@mui/material"
 
 const IndexPage = () => {
     return (
@@ -23,20 +24,28 @@ const IndexPage = () => {
             </Helmet>
             <Section className="p-3">
                 <Row>
-                    <Col
-                        style={{
-                            minWidth: "300px",
-                            textAlign: "center",
+                    <Box
+                        sx={{
+                            display: {
+                                xs: "none",
+                                sm: "block",
+                            },
                         }}
                     >
-                        <StaticImage
-                            src="../images/birds.svg"
-                            quality="100"
-                            placeholder="NONE"
-                            alt="Birds"
-                            style={{ maxWidth: "350px" }}
-                        />
-                    </Col>
+                        <Col
+                            style={{
+                                minWidth: "300px",
+                                textAlign: "center",
+                            }}
+                        >
+                            <StaticImage
+                                src="../images/birds.svg"
+                                quality="100"
+                                placeholder="NONE"
+                                alt="Birds"
+                            />
+                        </Col>
+                    </Box>
                     <Col
                         className="d-flex"
                         style={{
@@ -45,24 +54,10 @@ const IndexPage = () => {
                         }}
                     >
                         <div>
-                            <h1
-                                id="callout"
-                                className="py-1 px-2 mb-4 text-light"
-                                style={{
-                                    background: "salmon",
-                                    width: "fit-content",
-                                    fontSize: "23px",
-                                }}
-                            >
-                                Studio Voce
-                            </h1>
-                            <h1 className="mb-4" style={{ fontSize: "32px" }}>
+                            <Typography variant="h3" component="h1">
                                 Voice Lessons & Coaching
-                            </h1>
-                            <p
-                                className="mb-5"
-                                style={{ lineHeight: "27px", fontSize: "17px" }}
-                            >
+                            </Typography>
+                            <Typography variant="h6" component="h2" my={3}>
                                 <span
                                     style={{
                                         color: "#435a69",
@@ -76,7 +71,7 @@ const IndexPage = () => {
                                         Discover your unique voice.
                                     </span>
                                 </span>
-                            </p>
+                            </Typography>
                             <Link to="/#sign-up" className="mr-3">
                                 <Button
                                     variant="none"
@@ -130,33 +125,31 @@ const IndexPage = () => {
                             className="px-4 m-center"
                         >
                             <span>
-                                As a vocal coach with over 10 years of
-                                experience in musical theater, choir singing,
-                                and piano playing, Emily is passionate about
-                                helping her students discover and embrace the
-                                unique potential of their voices. She is
-                                dedicated to eliminating self-criticism and
-                                building self-confidence through singing, and
-                                believes that anyone can learn to love their own
-                                unique voice.
+                                With over 10 years of hands-on experience in
+                                musical theater, choir singing, and piano, Emily
+                                loves to bring out the best in her students'
+                                voices. She believes in the power of singing and
+                                is sure that everyone can grow to appreciate
+                                their own unique voice.
                             </span>
                             <br />
                             <br />
                             <span>
-                                With a bachelor's degree in vocal pedagogy,
-                                Emily is well-equipped to guide her students in
-                                finding their voices through techniques such as
-                                breath management, musical analysis, and
-                                artistic performance. If you are ready to sing
-                                smarter and are dedicated to improving your
-                                skills, Emily is excited to share her knowledge
-                                and talent with you.
+                                Having a bachelor's degree in how to teach
+                                singing, Emily is well-prepared to guide her
+                                students in uncovering their voices using easy
+                                methods. These include how to breathe while
+                                singing, how to understand music, and how to
+                                perform with feeling. If you're ready to learn
+                                new ways to sing and committed to getting
+                                better, Emily is excited to share her knowledge
+                                and love for singing with you.
                             </span>
                         </p>
                     </Col>
                     <Col style={{ minWidth: "300px" }}>
-                        <div
-                            style={{
+                        <Box
+                            sx={{
                                 maxWidth: "400px",
                                 marginRight: "auto",
                                 position: "relative",
@@ -175,7 +168,7 @@ const IndexPage = () => {
                                     transform: "scale(0.90)",
                                 }}
                             />
-                        </div>
+                        </Box>
                     </Col>
                 </Row>
             </Section>

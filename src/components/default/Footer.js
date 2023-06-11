@@ -1,5 +1,4 @@
 import React from "react"
-import { Section } from "./Section"
 import { Col, Row } from "react-bootstrap"
 import Birds from "../icons/birds"
 import { Helmet } from "react-helmet"
@@ -8,7 +7,7 @@ import { Link } from "gatsby"
 export function Footer() {
     const year = new Date().getFullYear()
     return (
-        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0 }}>
+        <div >
             <Helmet>
                 <style type="text/css">
                     {`
@@ -21,12 +20,11 @@ export function Footer() {
                     `}
                 </style>
             </Helmet>
-            <Section
-                spacers={false}
+            <div
                 style={{
                     background: "rgb(67, 90, 105)",
-                    borderRadius: "30px 30px 0 0",
                     padding: "50px",
+                    width: "100%"
                 }}
             >
                 <div className="footer" style={{ position: "relative" }}>
@@ -107,7 +105,7 @@ export function Footer() {
                         <Birds /> © {year} StudioVoce
                     </div>
                 </div>
-            </Section>
+            </div>
         </div>
     )
 }
